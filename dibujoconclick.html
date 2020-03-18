@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dibujando con formularios</title>
+    <style>
+      body
+      {
+       background-color: #CCEEFF;
+       color: black;
+       font-family: Helvetica;
+      }
+      strong
+      {
+        background-color: #AAAAFF;
+      }
+  </style>
+  </head>
+  <body>
+    <h1>Dibujo en canvas</h1>
+    <p> Cuantas líneas rojas quieres
+      <input type= "text" id= "texto_lineas" />
+      <input type="button" value ="Click aquí" id= "botoncito"/>
+     </p>
+      <p> Cuantas lineas violetas quieres
+      <input type ="text" id = "texto_lineas2">
+      <input type = "button" value = "Click aquí" id= "botoncito2">
+      </p>
+    <canvas width ="300" height="300" id="dibujito"></canvas>
+    <p><strong>Asi queda tu dibujo</strong> </p>
+    <script src="dibujoconclick.js"></script>
+  </body>
+</html>
