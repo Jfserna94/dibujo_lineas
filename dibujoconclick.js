@@ -5,7 +5,7 @@ var boton2 = document.getElementById("botoncito2");
 boton.addEventListener("click", dibujoPorClick);
 boton2.addEventListener("click", dibujoPorClick2);
 
-var d = document.getElementById("dibujitonuevo");
+var d = document.getElementById("dibujito");
 var ancho = d.width;
 var lienzo = d.getContext("2d");
 
