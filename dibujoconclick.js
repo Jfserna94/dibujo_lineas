@@ -1,5 +1,7 @@
 var texto = document.getElementById("texto_lineas");
-
+var boton = document.getElementById("botoncito");
+var texto2 = document.getElementById("texto_lineas2");
+var boton2 = document.getElementById("botoncito2");
 boton.addEventListener("click", dibujoPorClick);
 boton2.addEventListener("click", dibujoPorClick2);
 
