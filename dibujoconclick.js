@@ -6,18 +6,27 @@ var texto3 = document.getElementById("texto_lineas3");
 var boton3 = document.getElementById("botoncito3");
 var texto4 = document.getElementById("texto_lineas4");
 var boton4 = document.getElementById("botoncito4");
+var boton5 = document.getElementById("BotonLimpiar");
 
 boton.addEventListener("click", dibujoPorClick);
 boton2.addEventListener("click", dibujoPorClick2);
 boton3.addEventListener("click", dibujoPorClick3);
 boton4.addEventListener("click", dibujoPorClick4);
-
+boton5.addEventListener("click", limpia);
 
 var d = document.getElementById("dibujito");
 var ancho = d.width;
+var alto = d.height
 var lienzo = d.getContext("2d");
 
-
+function limpia()
+{
+  lienzo.clearRect(0, 0, ancho, alto);
+  texto.value = "";
+  texto2.value = "";
+  texto3.value = "";
+  texto4.value = "";
+}
 function dibujarLinea(color, x_inicial, y_inicial, x_final, y_final)
 {
   lienzo.beginPath();
