@@ -1,9 +1,17 @@
-var texto = document.getElementById("texto_lineas");
-var boton = document.getElementById("botoncito");
+var texto =  document.getElementById("texto_lineas");
+var boton =  document.getElementById("botoncito");
 var texto2 = document.getElementById("texto_lineas2");
 var boton2 = document.getElementById("botoncito2");
+var texto3 = document.getElementById("texto_lineas3");
+var boton3 = document.getElementById("botoncito3");
+var texto4 = document.getElementById("texto_lineas4");
+var boton4 = document.getElementById("botoncito4");
+
 boton.addEventListener("click", dibujoPorClick);
 boton2.addEventListener("click", dibujoPorClick2);
+boton3.addEventListener("click", dibujoPorClick3);
+boton4.addEventListener("click", dibujoPorClick4);
+
 
 var d = document.getElementById("dibujito");
 var ancho = d.width;
@@ -26,7 +34,7 @@ function dibujoPorClick()
   console.log(texto);
   var lineas = x;
   var l = 0;
-  var xi, xf;
+  var yi, xf;
   var espacio = ancho / lineas;
 
   while (l < lineas)
@@ -47,7 +55,7 @@ function dibujoPorClick2()
   console.log(texto2);
   var lineas = x;
   var l = 0;
-  var xi, xf;
+  var yi, xf;
   var espacio = ancho / lineas;
 
   for(l = 0; l < lineas; l++)
@@ -59,4 +67,41 @@ function dibujoPorClick2()
   }
   dibujarLinea("black", 299, 299, 299, 0);
   dibujarLinea("black", 299, 1, 1, 1);
+}
+function dibujoPorClick3()
+{
+  var x = parseInt(texto3.value);
+  console.log(texto3);
+  var lineas = x;
+  var l = 0;
+  var yi, xf;
+  var espacio = ancho / lineas;
+
+  while (l < lineas)
+  {
+    yi = espacio * l;
+    xf = ancho - espacio - (espacio * l);
+    dibujarLinea("green", 300, yi, xf, 300);
+    console.log("lineas" + l);
+    l = l + 1;
+  }
+
+}
+function dibujoPorClick4()
+{
+  var x = parseInt(texto4.value);
+  console.log(texto4);
+  var lineas = x;
+  var l = 0;
+  var yi, xf;
+  var espacio = ancho / lineas;
+
+  for(l = 0; l < lineas; l++)
+  {
+    yi = ancho - (espacio * l);
+    xf = espacio * ( l + 1);
+    dibujarLinea("blue", 0, yi, xf, 0);
+    console.log("lineas" + l);
+  }
+
 }
